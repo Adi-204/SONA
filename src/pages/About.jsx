@@ -26,13 +26,13 @@ const About = () => {
           </div>
           <div className='mt-4'>
             The Vision <br />
-            Sona was founded by Meera Kapoor, inspired by her grandmother’s dream to open a restaurant. With a deep passion for Indian cuisine, Meera aims to bring the authentic flavors of India to our community. Meera, an accomplished chef, and Arya( Meera’s sister) a gracious host, combined their talents to create a dining experience that feels like home.
+            Sona was founded by Ayushi Boghawala, inspired by her grandmother’s dream to open a restaurant. With a deep passion for Indian cuisine, Ayushi aims to bring the authentic flavors of India to our community. Ayushi, an accomplished chef, and Arya (Ayushi's sister) a gracious host, combined their talents to create a dining experience that feels like home.
           </div>
           <div className='mt-4'>Join Us at Sona <br />
             At Sona, we believe that every meal is an opportunity to celebrate life’s golden moments. Whether you’re joining us for a grand festival or an intimate dinner, we promise a warm welcome and an unforgettable experience.</div>
         </div>
         <div className='flex justify-center mt-8'>
-          <Button onClick={onClickHandler} className="rounded-full px-6 py-3 text-white font-semibold" color='teal'>
+          <Button onClick={onClickHandler} className="rounded-full px-6 py-3 text-white font-semibold text-[0.9rem]" color='teal'>
             Check menu
           </Button>
         </div>
