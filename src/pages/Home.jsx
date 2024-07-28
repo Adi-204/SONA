@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from 'react';
 import HomeCarousel from '../components/HomeCarousel';
 import TimingCard from '../components/TimingCard';
 import LocationCard from '../components/LocationCard';
@@ -7,6 +6,7 @@ import dishImg from "../assets/dish4.png";
 import ReviewCards from '../components/ReviewCards';
 import dish from "../assets/dish5.jpg";
 import MenuSection from '../components/MenuSection';
+import FAQSection from '../components/FAQSection';
 
 const Home = () => {
 
@@ -26,7 +26,7 @@ const Home = () => {
           <img className='h-[14vh] hidden md:block' src={dishImg} alt="Dish Image" />
         </div>
         <div className="flex items-center justify-center mt-16">
-          <span className="h-[1px] w-[80vw] bg-black mx-2"></span>
+          <span className="h-[1px] w-[80vw] bg-teal-300 mx-2"></span>
         </div>
       </div>
       <div className='flex justify-center'>
@@ -35,6 +35,10 @@ const Home = () => {
       <div className='mt-24'>
         <p className='text-center text-[2.5rem]'>What our customers say!</p>
         <ReviewCards />
+      </div>
+      <div className='mt-24'>
+      <p className='text-[2.5rem] lg:ml-36 ml-10'>Frequently Asked Question (FAQs)</p>
+        <FAQSection />
       </div>
     </div>
   )

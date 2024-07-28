@@ -1,6 +1,6 @@
 import React from 'react'
 import { Carousel, Typography, Button } from "@material-tailwind/react";
-import img1 from "../assets/Carousel1.jpg";
+import img1 from "../assets/res2.jpg";
 import img2 from "../assets/Designer.png";
 import img3 from "../assets/dish.jpg";
 
