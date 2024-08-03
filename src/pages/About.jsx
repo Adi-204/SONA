@@ -3,6 +3,7 @@ import hotelImg from '../assets/res1.jpg'
 import { Button } from "@material-tailwind/react";
 import { useNavigate } from 'react-router-dom';
 import img1 from "../assets/plane.jpeg";
+import { useEffect, useRef } from 'react';
 
 const About = () => {
 
@@ -12,8 +13,28 @@ const About = () => {
     navigate('/menu');
   }
 
+  const menuRefs = useRef([]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-slide-in');
+        }
+      });
+    });
+
+    menuRefs.current.forEach(ref => ref && observer.observe(ref));
+
+    return () => {
+      menuRefs.current.forEach(ref => ref && observer.unobserve(ref));
+    };
+  }, []);
+
   return (
-    <div className='max-w-[85vw] mx-auto mt-12'>
+    <div className='max-w-[85vw] mx-auto mt-12 mb-28'>
       <div className='relative h-full w-full'>
           <img src={img1} className="lg:h-[70vh] h-[50vh] w-full object-cover rounded-3xl " alt='Plane' />
           <div className="rounded-3xl absolute inset-0 grid h-full w-full place-items-center bg-black/75">
@@ -22,7 +43,7 @@ const About = () => {
             </div>
           </div>
       </div>
-      <div className='flex flex-col lg:flex-row lg:justify-between lg:items-start mt-32'>
+      <div ref={(el) => menuRefs.current[0] = el} className='flex flex-col lg:flex-row lg:justify-between lg:items-start mt-32'>
         <div className='lg:w-[50vw]'>
           <img src={hotelImg} className='w-full h-auto object-cover rounded-3xl' alt="SONA Image" />
         </div>

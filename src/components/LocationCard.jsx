@@ -9,7 +9,7 @@ const LocationCard = () => {
   return (
     <Card className="mt-6 lg:h-[40vh] lg:w-96 w-80 h-[35vh] bg-[#fafafb] border-solid border-2 border-gray-300 transition-transform transform hover:scale-105">
       <CardBody>
-        <p className="text-black text-[2rem] mb-2 text-center">
+        <p className="text-black lg:text-[2rem] text-[1.8rem] mb-2 text-center">
           Location
         </p>
         <div className="flex items-center justify-center my-4">
@@ -17,8 +17,8 @@ const LocationCard = () => {
           <span className="h-[2px] w-[18vw] bg-black mx-2"></span>
           <span className="bg-black h-2 w-2 rounded-full"></span>
         </div>
-        <p className='text-center text-[1.2rem] mt-8'>
-            1183 Hunt Club Rd Unit 104, <br /> Ottawa, ON K1V 8S4
+        <p className='text-center lg:text-[1.2rem] text-[1rem] mt-8'>
+          383 Elgin St, Ottawa, <br /> ON K2P 1N1
         </p>
       </CardBody>
     </Card>
