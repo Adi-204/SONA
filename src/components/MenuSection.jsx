@@ -13,7 +13,7 @@ const MenuSection = ({ img }) => {
   return (
     <div className='mt-16 flex flex-col lg:flex-row lg:items-center lg:gap-16'>
       <div className='lg:max-w-[40vw] max-w-[70vw]'>
-        <p className='text-left text-[2.5rem]'>Our Menu</p>
+        <p className='text-left lg:text-[2.5rem] text-[1.8rem]'>Our Menu</p>
         <p className='mt-4'>
           Welcome to SONA, where every dish tells a story of tradition and taste. Our carefully curated menu offers a delightful journey through the diverse culinary landscape of India. From the rich and creamy Feta Malai Kebab to the aromatic Amristari Fish fry each dish is crafted with the finest ingredients and authentic spices.
         </p>

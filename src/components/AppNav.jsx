@@ -59,14 +59,6 @@ const AppNav = () => {
             >
               Menu
             </NavLink>
-            <NavLink
-              to='/contact-us'
-              size="sm"
-              className='mr-4'
-              style={{ color: '#000' }}
-            >
-              Contact Us
-            </NavLink>
           </div>
 
           <IconButton
@@ -119,6 +111,7 @@ const AppNav = () => {
             size="sm"
             className='mr-4'
             style={{ color: '#000' }}
+            onClick={() => setOpenNav(false)}
           >
             Home
           </NavLink>
@@ -127,6 +120,7 @@ const AppNav = () => {
             size="sm"
             className='mr-4'
             style={{ color: '#000' }}
+            onClick={() => setOpenNav(false)}
           >
             About
           </NavLink>
@@ -135,16 +129,9 @@ const AppNav = () => {
             size="sm"
             className='mr-4'
             style={{ color: '#000' }}
+            onClick={() => setOpenNav(false)}
           >
             Menu
-          </NavLink>
-          <NavLink
-            to='/contact-us'
-            size="sm"
-            className='mr-4'
-            style={{ color: '#000' }}
-          >
-            Contact Us
           </NavLink>
         </div>
       </Collapse>

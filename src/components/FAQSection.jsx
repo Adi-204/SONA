@@ -29,20 +29,26 @@ const FAQSection = () => {
     return (
         <div className='lg:ml-36 mt-8 ml-12 max-w-[80vw]'>
             <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-                <AccordionHeader 
+                <AccordionHeader
                     className={`text-black transition-colors ${open === 1 ? "text-blue-500 hover:!text-blue-700" : "hover:text-black"
-                    }`} 
+                        }`}
                     onClick={() => handleOpen(1)}
                 >
                     What are your restaurant’s hours of operation?
                 </AccordionHeader>
                 <AccordionBody className='text-black text-[1.2rem]'>
-                    We are open daily from 11:00 AM to 10:00 PM.
+                    Monday : 5 – 10 pm <br />
+                    Tuesday : 5 – 10 pm <br />
+                    Wednesday : 5 – 10 pm <br />
+                    Thursday : 5 – 11 pm <br />
+                    Friday : 5 – 11 pm <br />
+                    Saturday : 5 – 11 pm <br />
+                    Sunday : 5 – 10 pm
                 </AccordionBody>
             </Accordion>
             <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
                 <AccordionHeader className={`text-black transition-colors ${open === 2 ? "text-blue-500 hover:!text-blue-700" : "hover:text-black"
-                    }`}  onClick={() => handleOpen(2)}>
+                    }`} onClick={() => handleOpen(2)}>
                     Do you offer vegetarian or vegan options?
                 </AccordionHeader>
                 <AccordionBody className='text-black text-[1.2rem]'>
@@ -51,7 +57,7 @@ const FAQSection = () => {
             </Accordion>
             <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
                 <AccordionHeader className={`text-black transition-colors ${open === 3 ? "text-blue-500 hover:!text-blue-700" : "hover:text-black"
-                    }`}  onClick={() => handleOpen(3)}>
+                    }`} onClick={() => handleOpen(3)}>
                     Are there gluten-free options available?
                 </AccordionHeader>
                 <AccordionBody className='text-black text-[1.2rem]'>
@@ -60,7 +66,7 @@ const FAQSection = () => {
             </Accordion>
             <Accordion open={open === 4} icon={<Icon id={4} open={open} />}>
                 <AccordionHeader className={`text-black transition-colors ${open === 4 ? "text-blue-500 hover:!text-blue-700" : "hover:text-black"
-                    }`}  onClick={() => handleOpen(4)}>
+                    }`} onClick={() => handleOpen(4)}>
                     What measures are you taking for health and safety?
                 </AccordionHeader>
                 <AccordionBody className='text-black text-[1.2rem]'>
@@ -69,7 +75,7 @@ const FAQSection = () => {
             </Accordion>
             <Accordion open={open === 5} icon={<Icon id={5} open={open} />}>
                 <AccordionHeader className={`text-black transition-colors ${open === 5 ? "text-blue-500 hover:!text-blue-700" : "hover:text-black"
-                    }`}  onClick={() => handleOpen(5)}>
+                    }`} onClick={() => handleOpen(5)}>
                     What payment methods do you accept?
                 </AccordionHeader>
                 <AccordionBody className='text-black text-[1.2rem]'>
