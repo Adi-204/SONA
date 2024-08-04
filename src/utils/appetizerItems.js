@@ -7,7 +7,7 @@ const menuItems = [
         ingredients: ['Puffed Rice', 'Avocado', 'Raw Mango', 'Onion', 'Tomato', 'Honey Chilli Dressing']
     },
     {
-        name: 'Green Chilli Toast',
+        name: 'Green Chilli Toast (4 pieces)',
         isGF : false,
         isV : false,
         ingredients: ['Housemade Sourdough Toast', 'Onion', 'Spinach', 'Fried Eggs', 'Mozzarella Cheese', 'Sweet Chilli Sauce']
