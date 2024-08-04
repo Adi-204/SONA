@@ -6,7 +6,7 @@ import logoImg from "../assets/logo1.jpg";
 
 const LINKS = [
   {
-    title: "Ottowo Location",
+    title: "Ottawa Location",
     items: ["383 Elgin St", "Ottawa, ON", "K2P 1N1", "(612) 548-9796", "Sonaottawa@gmail.com"],
   },
   {

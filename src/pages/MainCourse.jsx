@@ -69,7 +69,7 @@ const MainCourse = () => {
           GF - Gluten Free
         </p>
         <p className='italic text-sm bg-gray-100 p-2 rounded-lg border border-teal-300'>
-          V - Vegan
+          V - Vegetarian
         </p>
       </div>
     </div>
