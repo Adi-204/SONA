@@ -2,7 +2,7 @@
 const menuItems = [
     {
         name: 'Sona Chocolate Gateaux',
-        ingredients: ['Cashew Praline','Caramelized Bananas','Jaggery Bananas Kulfi']
+        ingredients: ['Cashew Praline','Caramelized Bananas','Jaggery Banana Kulfi']
     },
     {
         name: 'Mango Passion Sorbet',
