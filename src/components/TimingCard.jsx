@@ -21,7 +21,7 @@ const TimingCard = () => {
           <br />
           Mon / Tues / Wed / Sun : 5 – 10 pm
           <br />
-          Thrus / Fri / Sat : 5 – 11 pm
+          Thurs / Fri / Sat : 5 – 11 pm
         </p>
       </CardBody>
     </Card>

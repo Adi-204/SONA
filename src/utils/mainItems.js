@@ -34,7 +34,7 @@ const menuItems = [
         name: 'Tamarind BBQ Lamb Chops',
         isGF : true,
         isV : false,
-        ingredients: ['Grilled Lamb Chops','Pickled Onion','Green Mango Slaw']
+        ingredients: ['Grilled Lamb Chops','Pickled Onions','Green Mango Slaw']
     }
 ]
 
