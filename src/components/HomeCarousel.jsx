@@ -1,8 +1,32 @@
-import React from 'react'
-import { Carousel, Typography, Button } from "@material-tailwind/react";
+import React from 'react';
+import { Carousel, Typography } from "@material-tailwind/react";
 import img1 from "../assets/res2.jpg";
 import img2 from "../assets/Designer.png";
 import img3 from "../assets/dish.jpg";
+
+const carouselItems = [
+    {
+        img: img1,
+        alt: "Hotel Gate",
+        title: "Welcome to Sona",
+        description: "Crafting Golden Moments Through Food",
+        textAlign: "text-center",
+    },
+    {
+        img: img2,
+        alt: "Restaurant Interior",
+        title: "Warm Hospitality Awaits",
+        description: "Enjoy a Dining Experience Like No Other.",
+        textAlign: "text-left pl-12 md:pl-20 lg:pl-32",
+    },
+    {
+        img: img3,
+        alt: "Signature Dish",
+        title: "Discover Our Signature Dishes",
+        description: "Savor the Rich Flavors of Authentic Indian Cuisine",
+        textAlign: "text-left pl-12 pb-12 md:pl-20 md:pb-20 lg:pl-32 lg:pb-32",
+    },
+];
 
 const HomeCarousel = () => {
     return (
@@ -12,83 +36,31 @@ const HomeCarousel = () => {
             autoplayDelay={3200}
             loop={true}
         >
-            <div className="relative h-full w-full">
-                <img
-                    src={img1}
-                    alt="Hotel Gate"
-                    className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-                    <div className="w-3/4 text-center md:w-2/4">
-                        <Typography
-                            variant="h1"
-                            color="white"
-                            className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-                        >
-                            Welcome to Sona
-                        </Typography>
-                        <Typography
-                            variant="lead"
-                            color="white"
-                            className="mb-12 opacity-80"
-                        >
-                            Crafting Golden Moments Through Food
-                        </Typography>
+            {carouselItems.map((item, index) => (
+                <div key={index} className="relative h-full w-full">
+                    <img src={item.img} alt={item.alt} className="h-full w-full object-cover" />
+                    <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
+                        <div className={`w-3/4 md:w-2/4 ${item.textAlign}`}>
+                            <Typography
+                                variant="h1"
+                                color="white"
+                                className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+                            >
+                                {item.title}
+                            </Typography>
+                            <Typography
+                                variant="lead"
+                                color="white"
+                                className="mb-12 opacity-80"
+                            >
+                                {item.description}
+                            </Typography>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="relative h-full w-full">
-                <img
-                    src={img2}
-                    alt="image 2"
-                    className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
-                    <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
-                        <Typography
-                            variant="h1"
-                            color="white"
-                            className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-                        >
-                            Warm Hospitality Awaits
-                        </Typography>
-                        <Typography
-                            variant="lead"
-                            color="white"
-                            className="mb-12 opacity-80"
-                        >
-                            Enjoy a Dining Experience Like No Other. 
-                        </Typography>
-                    </div>
-                </div>
-            </div>
-            <div className="relative h-full w-full">
-                <img
-                    src={img3}
-                    alt="image 3"
-                    className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 grid h-full w-full items-end bg-black/75">
-                    <div className="w-3/4 pl-12 pb-12 md:w-2/4 md:pl-20 md:pb-20 lg:pl-32 lg:pb-32">
-                        <Typography
-                            variant="h1"
-                            color="white"
-                            className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-                        >
-                            Discover Our Signature Dishes
-                        </Typography>
-                        <Typography
-                            variant="lead"
-                            color="white"
-                            className="mb-12 opacity-80"
-                        >
-                            Savor the Rich Flavors of Authentic Indian Cuisine
-                        </Typography>
-                    </div>
-                </div>
-            </div>
+            ))}
         </Carousel>
-    )
-}
+    );
+};
 
-export default HomeCarousel
+export default HomeCarousel;

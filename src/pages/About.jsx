@@ -9,7 +9,7 @@ const About = () => {
 
   const navigate = useNavigate();
 
-  const onClickHandler = ()=>{
+  const onClickHandler = () => {
     navigate('/menu');
   }
 
@@ -36,12 +36,12 @@ const About = () => {
   return (
     <div className='max-w-[85vw] mx-auto mt-12 mb-28'>
       <div className='relative h-full w-full'>
-          <img src={img1} className="lg:h-[70vh] h-[50vh] w-full object-cover rounded-3xl " alt='Plane' />
-          <div className="rounded-3xl absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-            <div className="w-3/4 text-center md:w-2/4">
-              <p className='text-white lg:text-[2.5rem] text-[2rem]'>Our journey from India to Ottawa</p>
-            </div>
+        <img src={img1} className="lg:h-[70vh] h-[50vh] w-full object-cover rounded-3xl " alt='Plane' />
+        <div className="rounded-3xl absolute inset-0 grid h-full w-full place-items-center bg-black/75">
+          <div className="w-3/4 text-center md:w-2/4">
+            <p className='text-white lg:text-[2.5rem] text-[2rem]'>Our journey from India to Ottawa</p>
           </div>
+        </div>
       </div>
       <div ref={(el) => menuRefs.current[0] = el} className='flex flex-col lg:flex-row lg:justify-between lg:items-start mt-32'>
         <div className='lg:w-[50vw]'>
@@ -67,8 +67,12 @@ const About = () => {
             </div>
           </div>
           <div className='flex justify-center mt-8'>
-            <Button onClick={onClickHandler} className="rounded-full px-6 py-3 text-white font-semibold text-[0.9rem]" color='teal'>
-              Check menu
+            <Button
+              onClick={() => navigate('/menu')}
+              className="bg-teal-800 hover:bg-teal-900 text-white rounded-full px-6 py-3 font-semibold text-[0.9rem] shadow-md transition-all"
+              aria-label="Check full menu"
+            >
+              Check Full Menu
             </Button>
           </div>
         </div>

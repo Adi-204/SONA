@@ -16,11 +16,17 @@ const LINKS = [
   {
     title: "Social Media",
     items: [
-      <span className='flex space-x-4' key="social-media">
-        <FaFacebook />
-        <FaInstagram />
-        <FaSquareXTwitter />
-      </span>
+      <li key="social-media" className='flex space-x-4' aria-label="Social media links">
+        <a href="https://facebook.com" aria-label="Facebook">
+          <FaFacebook />
+        </a>
+        <a href="https://instagram.com" aria-label="Instagram">
+          <FaInstagram />
+        </a>
+        <a href="https://twitter.com" aria-label="Twitter">
+          <FaSquareXTwitter />
+        </a>
+      </li>
     ],
   },
 ];
@@ -33,30 +39,37 @@ const AppFooter = () => {
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <div>
-            <img src={logoImg} className='h-40' alt="Logo Image" />
+            <img src={logoImg} className='h-40' alt="Sona Logo" />
           </div>
           <div className="grid grid-cols-3 justify-between gap-4">
             {LINKS.map(({ title, items }) => (
-              <ul key={title}>
+              <div key={title}>
+                {/* Updated Heading Order (h5 instead of h6) */}
                 <Typography
-                  variant="h6"
+                  variant="h5"
                   color="blue-gray"
-                  className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
+                  className="py-1.5 font-semibold transition-colors hover:text-blue-gray-900"
                 >
                   {title}
                 </Typography>
-                {items.map((link, index) => (
-                  <li key={index}>
-                    <Typography
-                      variant="small"
-                      color="blue-gray"
-                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
-                    >
-                      {link}
-                    </Typography>
-                  </li>
-                ))}
-              </ul>
+                <ul>
+                  {items.map((link, index) => (
+                    <li key={index} className="py-1.5">
+                      {typeof link === "string" ? (
+                        <Typography
+                          variant="small"
+                          color="blue-gray"
+                          className="font-normal transition-colors hover:text-blue-gray-900"
+                        >
+                          {link}
+                        </Typography>
+                      ) : (
+                        link
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
